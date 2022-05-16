@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "855110849268",
+    "firebase_url": "https://chuckchat-b4aff-default-rtdb.firebaseio.com",
     "project_id": "chuckchat-b4aff",
     "storage_bucket": "chuckchat-b4aff.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "855110849268-td9v0lk76lqochfoqpl6u81428m9jn9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chuckchat",
+            "certificate_hash": "61d874eeadc5c055c209f29fc4ba0c39f4b56dab"
+          }
+        },
         {
           "client_id": "855110849268-r7h6fgeir8q8tjbd9ooutibk5uc0mnvi.apps.googleusercontent.com",
           "client_type": 3

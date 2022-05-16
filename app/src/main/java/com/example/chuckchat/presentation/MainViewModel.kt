@@ -10,8 +10,6 @@ class MainViewModel(private val sendMessageUseCase: SendMessageUseCase) : ViewMo
     fun sendMessage(user:User) {
     sendMessageUseCase.exequte(user)
     }
-    val messages: LiveData<User>
-        get() {
-            TODO()
-        }
+   // val messages: LiveData<User> = TODO()
+
 }
