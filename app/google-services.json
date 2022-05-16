@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "855110849268",
+    "project_id": "chuckchat-b4aff",
+    "storage_bucket": "chuckchat-b4aff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855110849268:android:adfc7670cb3245f5ce84a1",
+        "android_client_info": {
+          "package_name": "com.example.chuckchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855110849268-r7h6fgeir8q8tjbd9ooutibk5uc0mnvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUpRWwGdsgwj8En76Xl4daKxCGyU_azkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855110849268-r7h6fgeir8q8tjbd9ooutibk5uc0mnvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
