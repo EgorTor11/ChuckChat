@@ -40,12 +40,12 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.btnSend.setOnClickListener {
-//            mViewModel.sendMessage(User(auth.currentUser?.displayName.toString(),
-//               binding.edMessage.text.toString()))
-//           binding.edMessage.setText("")
-            repositoryImpl.sendMessage(User(auth.currentUser?.displayName.toString(),
+            mViewModel.sendMessage(User(auth.currentUser?.displayName.toString(),
                 binding.edMessage.text.toString()))
             binding.edMessage.setText("")
+//            repositoryImpl.sendMessage(User(auth.currentUser?.displayName.toString(),
+//                binding.edMessage.text.toString()))
+//            binding.edMessage.setText("")
         }
         binding.imageView.setOnClickListener {
             Thread {
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                             var txt2 = txt1.substringBefore("\"}")
                             Log.d("MyLog",
                                 test)
-                            runOnUiThread(){
+                            runOnUiThread() {
                                 binding.edMessage.setText(txt2)
 
 
