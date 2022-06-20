@@ -19,10 +19,15 @@ import com.squareup.picasso.Picasso
 import okhttp3.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.io.IOException
+import android.speech.tts.TextToSpeech
+import android.speech.tts.TextToSpeech.OnInitListener
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     val mViewModel: MainViewModel by viewModel<MainViewModel>()
     val repositoryImpl = UserRepositoryImpl()
+    private var TTS: TextToSpeech? = null
 
     //val getMessageUseCase = GetMessageUseCase(repositoryImpl)
     //val sendMessageUseCase = SendMessageUseCase(repositoryImpl)
@@ -38,10 +43,11 @@ class MainActivity : AppCompatActivity() {
         val database = Firebase.database
         val myRef = database.getReference("message")
         auth = Firebase.auth
-
+textToSpeech()
         binding.btnSend.setOnClickListener {
             mViewModel.sendMessage(User(auth.currentUser?.displayName.toString(),
                 binding.edMessage.text.toString()))
+            TTS?.speak(binding.edMessage.text.toString(),TextToSpeech.QUEUE_FLUSH,null)
             binding.edMessage.setText("")
 //            repositoryImpl.sendMessage(User(auth.currentUser?.displayName.toString(),
 //                binding.edMessage.text.toString()))
@@ -75,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 })
             }.start()
-
+                // для комита
         }
 
         //setUpActionBar()
@@ -128,6 +134,9 @@ class MainActivity : AppCompatActivity() {
             binding.rcView.smoothScrollToPosition(adapter.itemCount - 1)
         })
 
+    }
+    fun textToSpeech(){
+        TTS = TextToSpeech(this) { TTS?.setLanguage(Locale.ENGLISH)}
     }
 
 }
